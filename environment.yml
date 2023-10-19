@@ -1,0 +1,11 @@
+name: mobyle 
+channels:
+  - conda-forge
+  - pyviz
+dependencies:
+  - geoviews
+  - holoviews
+  - hvplot
+  - panel
+  - xarray
+  - zarr
