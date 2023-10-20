@@ -51,23 +51,25 @@ def main() -> None:
     # create stream for selection of points
     selection = streams.Selection1D(source=points)
     
-    # create amplitude plot for selection of points
-    def plot_amplitude(index):
+    # create variable plots for selection of points
+    def plot_variables(index):
         if not index or len(index) > TOO_MANY_POINTS:
             # for no or too many points, plot point 0
-            return plot_amplitude([0])
+            return plot_variables([0])
         else:
-            return hv.Overlay([
-                stm \
-                    .isel(points=i) \
-                    .hvplot \
-                    .line(x='time', y='amplitude')
-                for i in index
-            ])
-    amplitude = hv.DynamicMap(plot_amplitude, streams=[selection])
-    
+            return hv.NdLayout({
+                       var: hv.NdOverlay({
+                           idx: stm[var].isel(points=idx).hvplot(x='time')
+                           for idx in index
+                       })
+                       for var in ['amplitude', 'phase', ]
+            }).cols(1)
+    variables = hv.DynamicMap(plot_variables, streams=[selection])
+    # fix issue of Layout not being the most external plot instance
+    variables = variables.collate()
+
     # start panel dashboard
-    pn.panel(points + amplitude).show()
+    pn.panel(points + variables).show()
     
     
 if __name__ == '__main__':
