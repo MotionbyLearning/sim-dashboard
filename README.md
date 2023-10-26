@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This repository includes some experimental work to setup a dasboard to visualize space-time matrix (STM) datasets.
+This repository includes some experimental work to setup a dashboard to visualize space-time matrix (STM) datasets.
 
 ## Installation
 
-Create python environment using `conda` (or its faster implementation `mamba`):
+Create the Python environment using `conda` (or its faster implementation `mamba`):
 
 ```shell
 mamba env create -f environment.yml
