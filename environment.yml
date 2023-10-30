@@ -3,9 +3,18 @@ channels:
   - conda-forge
   - pyviz
 dependencies:
+  - dask[complete]
+  - dask-jobqueue
+  - dask-labextension
+  - geopandas
   - geoviews
   - holoviews
   - hvplot
+  - jupyterlab>=3
+  - jupyterlab-git
   - panel
+  - pip
   - xarray
   - zarr
+  - pip:
+    - git+https://github.com/MotionbyLearning/stmtools
