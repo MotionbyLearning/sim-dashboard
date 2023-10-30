@@ -27,7 +27,7 @@ def parse_args(args: Dict = None) -> Tuple:
     parser.add_argument('--stm-path', type=str, required=True,
                         help='Path to STM Zarr dataset')
     args = parser.parse_args(args)
-    return (args.stm_path, )
+    return args.stm_path,
 
 
 def main() -> None:
