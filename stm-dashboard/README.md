@@ -14,7 +14,7 @@ unzip -d data data/stm.zarr.zip
 
 ## Running
 
-After having create the environment (see [here](../README.md)), start the dashboard:
+After having create the environment (see [here](../README.md#installation)), start the dashboard:
 
 ```shell
 conda activate mobyle
