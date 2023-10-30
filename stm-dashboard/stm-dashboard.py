@@ -1,5 +1,4 @@
 import argparse
-import os 
 
 import holoviews as hv
 import hvplot.xarray
