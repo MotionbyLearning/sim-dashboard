@@ -4,7 +4,6 @@ channels:
   - pyviz
 dependencies:
   - dask[complete]
-  - dask-jobqueue
   - dask-labextension
   - geopandas
   - geoviews
