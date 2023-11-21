@@ -4,8 +4,8 @@
 
 You can start a Jupyter Lab session on Spider in one of the following ways:
 
-a. Using a conda-based installation.
-b. Using an apptainer container.
+1. Using a conda-based installation.
+2. Using an apptainer container.
 
 We have observed long waiting times for the Jupyter kernel to start and for importing libraries when using the first
 approach. This is because conda installations typically involve a large number of small files, which do not play well with
@@ -14,7 +14,7 @@ The use of apptainer bypasses this issue. However, Dask JobQueue, which can be u
 beyond a given SLURM allocation, currently does not work with the apptainer-based approach (standard "local" clusters 
 can still be created within the requested SLURM allocation). 
 
-### a. Using a conda-based installation
+### 1. Using a conda-based installation
 
 * Create a Python environment with all the dependencies (see [here](../README.md#conda));
 * Submit the SLURM job script [`jupyter-conda.slurm`](./jupyter-conda.slurm), modifying parameters as appropriate (remove options for 
@@ -24,7 +24,7 @@ can still be created within the requested SLURM allocation).
   sbatch --time=10:00:00 --cpus-per-task=4 jupyter-conda.slurm
   ```
 
-### b. Using an apptainer container.
+### 2. Using an apptainer container.
 
 * Submit the SLURM job script [`jupyter-apptainer.slurm`](./jupyter-apptainer.slurm), modifying parameters as appropriate (remove options for  
   default values):
