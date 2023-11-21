@@ -1,4 +1,4 @@
-name: mobyle 
+name: stm-dashboard 
 channels:
   - conda-forge
   - pyviz
@@ -12,6 +12,7 @@ dependencies:
   - hvplot
   - jupyterlab>=3
   - jupyterlab-git
+  - jupyter_bokeh
   - panel
   - pip
   - xarray
