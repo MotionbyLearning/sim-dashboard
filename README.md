@@ -25,12 +25,12 @@ mamba env create -f environment.yml
 
 ### Apptainer
 
-We also provide an Apptainer (formerly known as Singularity) image with the environment already setup. Images are built
+We also provide an Apptainer (formerly known as Singularity) image with the environment already set up. Images are built
 using GitHub Actions for every release and pushed to the GitHub Container Registry. Start the Python REPL in a container
 using:
 
 ```shell
-singularity exec \
+apptainer exec \
   oras://ghcr.io/MotionbyLearning/stm-dashboard:latest \
   python
 ```
