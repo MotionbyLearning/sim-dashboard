@@ -1,0 +1,9 @@
+name: default
+channels:
+ - conda-forge
+dependencies:
+ - jupyterlab>=3
+ - jupyterlab-git
+ - dask-labextension
+ - dask[complete]
+ - bokeh=3.2.2  # https://github.com/dask/dask-labextension/issues/270
