@@ -16,7 +16,7 @@ This repository includes some experimental work on the visualization of space-ti
 
 ### Conda
 
-The `environment.yml`[./environment.yml] file allows you to create a Python environment with all the required 
+The [`environment.yml`](./environment.yml) file allows you to create a Python environment with all the required 
 dependencies using `conda` (or its faster implementation `mamba`):
 
 ```shell
