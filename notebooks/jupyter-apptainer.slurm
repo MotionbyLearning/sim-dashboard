@@ -15,5 +15,7 @@ echo "ssh -i /path/to/private/ssh/key -N -L ${lport}:${node}:${port} ${USER}@spi
 cd ${HOME}
 
 apptainer exec \
-  oras://ghcr.io/MotionbyLearning/stm-dashboard:latest \
+  --bind /project/caroline \
+  oras://ghcr.io/motionbylearning/stm-dashboard:latest \
   jupyter lab --no-browser --port=${port} --ip=0.0.0.0
+
